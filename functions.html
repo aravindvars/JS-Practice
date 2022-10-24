@@ -23,37 +23,38 @@
     const para = document.querySelector('p');
 
     function squared(num) {
-      return num * num;
+      return num * num
     }
     function cubed(num) {
-      return num * num * num;
+      return num * num * num
     }
     function factorial(num) {
+      let x = num - 1
       if (num < 0) {
-        return undefined;
+        return undefined
       }
       if (num === 0) {
-        return 1;
+        return 1
       }
-      let x = num - 1;
+
       while (x > 0) {
-        num = num * x;
-        x--;
+        num = num * x
+        x--
       }
-      return num;
+      return num
     }
 
-    input.addEventListener('Change', () => {
-      const num = parseInt(input)
+    input.addEventListener('change', () => {
+      const num = parseInt(input.value)
       if (isNaN(num)) {
-        para.textContent = "You need to enter a number";
+        para.textContent = "You need to enter a number"
       }
       else {
-        para.textContent = `${num} squared is ${squared(num)}. `;
-        para.textContent += `${num} cubed is ${cubed(num)}. `;
-        para.textContent += `${num} factorial is ${factorial(num)}. `;
+        para.textContent = `${num} squared is ${squared(num)} and `
+        para.textContent += `${num} cubed is ${cubed(num)} and `
+        para.textContent += `${num} factorial is ${factorial(num)}. `
       }
-    });
+    })
   </script>
 </body>
 
