@@ -44,7 +44,7 @@
       return num
     }
 
-    input.addEventListener('change', () => {
+    input.addEventListener('keydown', () => {
       const num = parseInt(input.value)
       if (isNaN(num)) {
         para.textContent = "You need to enter a number"

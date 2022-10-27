@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice-1</title>
+</head>
+
+<body>
+
+  <script>
+
+    let x = prompt(`The variable = `)
+    let n = prompt(`The power of the variable = `)
+    if (n < 1) {
+      alert(`The value ${n} you entered is invalid. Please enter a value greater than 1 in the power tab`)
+    }
+    else {
+      alert(`${x}^${n} = ${pow(x, n)}`)
+    }
+    function pow(x, n) {
+      let result = x
+      for (i = 0; i < n - 1; i++) {
+        result *= x
+        // Can also be written as  result = result * x
+      }
+      return result
+    }
+  </script>
+</body>
+
+</html>
