@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Prime numbers display</title>
+</head>
+
+<body>
+  <script>
+    let number = prompt("Enter an Integer value for n: ", 0);
+    function findOutRemainder() {
+      let result;
+      let flag = 0;
+      let i;
+      let j;
+      outer: for (i = 2; i < number; i++) {
+        for (j = 2; j < i; j++) {
+          // console.log(`Value of i is ${i}`);
+          // console.log(`Value of j is ${j}`);
+          result = i % j;
+          // console.log(result);
+          if (result == 0)
+            continue outer;
+          // else flag = 0;
+        }
+        console.log(i);
+      }
+      // console.log(result);
+      // if (flag == 0) { console.log(`Numbers where remainder is not zero are ${i}`); }
+    }
+    findOutRemainder();
+//Psuedo-code:
+// take user input for the number = n
+// iterate from 2 to n - for(i=2, i<=n, i++)
+// for(j=2;j<i;j++) 
+// .  let result=  i%j
+// return result
+// if(i%j ==0)
+// continue
+// else return i
+  </script>
+</body>
+
+</html>

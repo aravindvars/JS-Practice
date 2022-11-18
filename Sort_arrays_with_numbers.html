@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    const points = [40, 99, 1, 5, 63, 100, 78, 66];
+    console.log(points.sort());
+    for (i = 0; i < points.length; i++) {
+      for (j = i; j < points.length; j++) {
+        if (points[j] < points[i]) {
+          temp = points[i];
+          points[i] = points[j];
+          points[j] = temp;
+        }
+      }
+
+    }
+    console.log(points);
+    console.log(points.length);
+//psuedo-code:
+// for (i=0;i<p.length;i++)
+// for (j=1;j<p.length;j++)
+// if (p.charat[i]>p.charat[j])
+//  p.charat[j]=p.chart[i]
+//
+
+  </script>
+</body>
+
+</html>
