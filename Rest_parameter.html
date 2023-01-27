@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Resr-parameter</title>
+</head>
+
+<body>
+
+  <script>
+    function sum(...theArgs) {
+      let total = 0;
+      for (const arg of theArgs) {
+        total += arg;
+      }
+      return total;
+    };
+    sum(1, 2, 3);
+
+
+  </script>
+</body>
+
+</html>
